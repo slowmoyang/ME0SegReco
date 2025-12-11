@@ -13,7 +13,7 @@ ME0SegReco is a deep learning framework for ME0 (Muon Endcap 0) segment reconstr
   - Transformer Encoder-based model (ME0Transformer)
 - **PyTorch Lightning Integration**: Simplified training, validation, and testing workflows
 - **Flexible Configuration**: YAML-based configuration system using jsonargparse
-- **Comprehensive Metrics**: Hit-level, segment-level, and segment graph metrics
+- **Comprehensive Metrics**: Hit-level, segment-level
 - **Data Processing**: HDF5-based dataset handling with efficient batching
 - **Post-processing**: Clustering algorithms for segment reconstruction
 
@@ -155,7 +155,7 @@ ME0SegReco/
 The framework provides comprehensive evaluation metrics:
 - **Hit-level metrics**: Precision, recall, F1-score for individual hits
 - **Segment-level metrics**: Segment reconstruction quality
-- **Segment graph metrics**: Graph-based evaluation of reconstructed segments
+- **Segment metrics for graphs**: torchmetrics to create performance graphs
 
 ## Dataset Generation
 
