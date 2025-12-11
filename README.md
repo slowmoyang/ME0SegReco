@@ -35,7 +35,7 @@ cd ME0SegReco
 2. Create and activate the conda environment:
 ```bash
 micromamba env create -f environment.yaml
-micromamba activate me0segreco-py311
+micromamba activate ME0SegReco-py311
 ```
 
 > **Note**: The `environment.yaml` file is configured for the University of Seoul GPU cluster. Users must modify dependency versions (e.g., PyTorch, CUDA) to ensure compatibility with their local environments.
@@ -86,7 +86,7 @@ model:
   class_path: me0.modules.cnn.modelmodule.ModelModule
   init_args:
     model:
-      class_path: me0.modules.cnn.cnn.ME0SegCNN3d
+      class_path: me0.modules.cnn.model.ME0SegCNN3d
       init_args:
         in_channels: 3
         out_channels: 1
@@ -188,7 +188,7 @@ The project uses HDF5 format for data storage. Input data is expected to have:
 
 ## License
 
-Please refer to the repository for license information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
