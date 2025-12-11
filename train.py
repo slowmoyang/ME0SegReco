@@ -10,7 +10,7 @@ def run(cli: MyLightningCLI):
     cli.test('best')
 
 def main():
-    # TODO: Make num_threads configurable via CLI argument
+    # FIXME
     torch.set_num_threads(2)
 
     cli = MyLightningCLI(

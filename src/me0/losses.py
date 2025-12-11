@@ -18,8 +18,7 @@ def masked_bce_loss(
     if isinstance(pos_weight, (int, float)):
         pos_weight = torch.tensor(pos_weight, dtype=torch.float, device=input.device)
 
-    # Convert target to binary float tensor (values > 0 become 1.0)
-    target = target.gt(0).type(torch.float32)
+    target = target.gt(0).type(torch.float32) # FIXME
     loss = binary_cross_entropy_with_logits(input, target, reduction='none', pos_weight=pos_weight)
     loss.masked_fill_(~data_mask, 0)
 

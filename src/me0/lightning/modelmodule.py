@@ -23,8 +23,7 @@ class BaseModelModule(LightningModule):
         self.criterion = criterion.to_tensor_dict_module()
         self.metrics_init = metrics_init
         self.optimizer_init = optimizer_init
-        # Store initial learning rate for LR finder to modify later
-        self.lr = optimizer_init['init_args']['lr'] 
+        self.lr = optimizer_init['init_args']['lr'] # FIXME 
 
     @cached_property
     def val_metrics(self):
